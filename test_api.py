@@ -51,7 +51,7 @@ def test_report_request():
             "country": "United States",
             "industry": "Technology"
         },
-        "finalPrompt": "Generate a comprehensive market analysis report for a technology startup focusing on competitive landscape, target demographics, and growth opportunities in the US market."
+        "finalPrompt": "Generate a comprehensive market analysis report for "
     }
     
     try:

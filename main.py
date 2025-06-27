@@ -8,7 +8,7 @@ from firebase_admin import firestore
 from datetime import datetime
 import logging
 from firebase_config import initialize_firebase
-from report_generator import generate_business_report, BusinessInfo as ReportBusinessInfo
+from report_generator import generate_business_report_sync, BusinessInfo as ReportBusinessInfo
 
 # Load environment variables
 load_dotenv()
@@ -74,7 +74,7 @@ def report_processor(business_info: BusinessInfo, prompt: str) -> str:
         )
         
         # Generate the report using the separate module
-        generated_report = generate_business_report(report_business_info, prompt)
+        generated_report = generate_business_report_sync(report_business_info, prompt)
         
         return generated_report
         
